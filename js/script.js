@@ -1,11 +1,5 @@
 (() => {
 
-  var BASE_PATH = (function () {
-    var path = location.pathname;
-    if (path.endsWith('/')) return path;
-    return path.substring(0, path.lastIndexOf('/') + 1);
-  })();
-
   // Theme ------------------------------------------------------------------
 
   var STORAGE_KEY = 'theme-preference';
@@ -64,7 +58,7 @@
 
   function createProjectCard(project) {
     var card = document.createElement('a');
-    card.href = BASE_PATH + 'project.html?slug=' + project.slug;
+    card.href = 'project.html?slug=' + project.slug;
     card.className = 'project-card';
     card.innerHTML =
       '<div class="project-card-header">' +
@@ -80,7 +74,7 @@
     var grid = document.getElementById('project-grid');
     if (!grid) return;
 
-    fetch(BASE_PATH + 'data/repositories.json')
+    fetch('data/repositories.json')
       .then(function (response) {
         if (!response.ok) throw new Error('Network response was not ok');
         return response.json();
@@ -103,7 +97,7 @@
     var slug = params.get('slug');
     if (!slug) return;
 
-    fetch(BASE_PATH + 'data/repositories.json')
+    fetch('data/repositories.json')
       .then(function (response) {
         if (!response.ok) throw new Error('Network response was not ok');
         return response.json();
@@ -147,7 +141,7 @@
   // Service Worker ---------------------------------------------------------
 
   if ('serviceWorker' in navigator && location.protocol !== 'file:') {
-    navigator.serviceWorker.register(BASE_PATH + 'sw.js').catch(function () {});
+    navigator.serviceWorker.register('sw.js').catch(function () {});
   }
 
 })();

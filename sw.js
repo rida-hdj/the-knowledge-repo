@@ -1,4 +1,4 @@
-const CACHE_NAME = 'knowledge-repository-v1';
+const CACHE_NAME = 'knowledge-repository-v2';
 
 const PRECACHE_URLS = [
   './',
