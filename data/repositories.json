@@ -1,0 +1,12 @@
+[
+  {
+    "slug": "technical-repo",
+    "name": "المستودع التقني",
+    "description": "مستودع تقني يهتم بشرح المفاهيم التقنية",
+    "publicationDate": "2026-08-19",
+    "logo": "https://raw.githubusercontent.com/rida-hdj/the-technical-repo/main/public/logo.png",
+    "website": "https://rida-hdj.github.io/the-technical-repo/",
+    "github": "https://github.com/rida-hdj/the-technical-repo",
+    "content": "المستودع التقني مدونة تقنية تهدف الى تقديم محتوى تقني باللغة العربية و بطريقة مبسطة"
+  }
+]

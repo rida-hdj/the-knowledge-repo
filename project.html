@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>المستودع المعرفي</title>
+  <meta name="description" content="مشروع يضم مجموعة من المدونات والمنصات المعرفية التقنية باللغة العربية">
+  <script>
+    (function() {
+      var stored = null;
+      try { stored = localStorage.getItem('theme-preference'); } catch (e) {}
+      var theme = stored || (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+      document.documentElement.setAttribute('data-theme', theme);
+    })();
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/global.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container site-header-inner">
+      <a href="/" class="site-brand">المستودع المعرفي</a>
+      <button class="theme-toggle" type="button" aria-label="تبديل الوضع الداكن/الفاتح">
+        <i data-lucide="moon" class="icon-moon"></i>
+        <i data-lucide="sun" class="icon-sun"></i>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <div class="container project-page">
+      <div class="project-header">
+        <img id="project-logo" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" alt="" class="project-logo" decoding="async">
+        <h1 id="project-name" class="project-name"></h1>
+        <p id="project-description" class="project-description"></p>
+        <span id="project-date" class="project-date"></span>
+      </div>
+
+      <hr class="project-divider">
+
+      <p id="project-content" class="project-intro"></p>
+
+      <div class="project-links">
+        <a id="project-website" href="" target="_blank" rel="noopener noreferrer" class="project-link">
+          <i data-lucide="external-link"></i>
+          زيارة الموقع
+        </a>
+        <a id="project-github" href="" target="_blank" rel="noopener noreferrer" class="project-link project-link--secondary">
+          <i data-lucide="github"></i>
+          مستودع GitHub
+        </a>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container site-footer-inner">
+      <span>المستودع المعرفي — مشروع معرفي.</span>
+      <a class="footer-handle" href="https://github.com/rida-hdj" target="_blank" rel="noopener noreferrer">rida-hdj</a>
+      <span class="designer-tag">© 2026 المستودع المعرفي</span>
+    </div>
+  </footer>
+
+  <script src="https://unpkg.com/lucide@1.34.0"></script>
+  <script src="js/script.js" defer></script>
+</body>
+</html>
